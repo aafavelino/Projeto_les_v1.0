@@ -227,6 +227,11 @@ bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
 		_pAnte = _pAIL;
 		_pAIL = _pAIL->mpNext;
 	}
+	if (_pAIL == NULL)
+		return false
+
+	_pAnte->mpNext = _pAIL->mpNext;
+	delete _pAIL->mpNext
 
     return true;
 }
