@@ -4,10 +4,6 @@
 
 using namespace std;
 
-//! Prints the list.
-/*! This a debugging function that prints the list content.
- *  @param _pAIL Pointer to the head of the list. It NULL, list is empty.
- */
 void print( SNPtr _pAIL )
 {	
 	if (_pAIL == nullptr)
