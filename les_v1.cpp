@@ -16,11 +16,6 @@ void print( SNPtr _pAIL )
 	}
 }
 
-//! Length of the list.
-/*! Calculates and return the length of the list. Length is zero, if list is empty.
- *  @param _pAIL Pointer to the head of the list. It NULL, list is empty.
- *  @return The length.
- */
 int length( SNPtr _pAIL )
 {
 	int slave = 0;
