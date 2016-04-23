@@ -208,6 +208,11 @@ bool insert( SNPtr & _pAIL, SNPtr _pAnte, int _newVal )
 
 bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
 {
+	_pAIL = _pAIL->mpNext;
+	_pAnte = _pAIL;
+
+	if (_pAIL == NULL)
+		return true;
     return true;
 }
 
