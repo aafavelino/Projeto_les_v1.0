@@ -213,6 +213,14 @@ bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
 
 	if (_pAIL == NULL)
 		return true;
+	
+	if (_pAnte == NULL)
+	{
+		_retrievedVal = _pAIL->miData;
+		SNPtr slave = _pAIL->mpNext;
+		delete _pAIL;
+		_pAIL = slave;
+	}
     return true;
 }
 
