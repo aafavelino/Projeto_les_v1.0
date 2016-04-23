@@ -221,6 +221,13 @@ bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
 		delete _pAIL;
 		_pAIL = slave;
 	}
+	
+	while(_pAnte != _pAIL and _pAIL != NULL)
+	{
+		_pAnte = _pAIL;
+		_pAIL = _pAIL->mpNext;
+	}
+
     return true;
 }
 
