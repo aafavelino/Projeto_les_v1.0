@@ -28,10 +28,10 @@ void print( SNPtr _pAIL )
 int length( SNPtr _pAIL )
 {
 	int slave = 0;
-	if (_pAIL == nullptr)
+	if (_pAIL == NULL)
     	return 0;
     else
-    	while(_pAIL != nullptr)
+    	while(_pAIL != NULL)
     	{
     		slave++;
     	}
@@ -41,7 +41,7 @@ int length( SNPtr _pAIL )
 
 bool empty( SNPtr _pAIL )
 {
-	if (_pAIL == nullptr)
+	if (_pAIL == NULL)
     	return true;
     else
     	return false;
@@ -53,19 +53,19 @@ void clear( SNPtr & _pAIL )
 	SNPtr slave;
 	slave = _pAIL;
 
-	while(_pAIL != nullptr)
+	while(_pAIL != NULL)
 	{
-		_pAIL = nullptr;
+		_pAIL = NULL;
 		_pAIL = slave -> mpNext;
 	}
 	delete[] _pAIL;
-	_pAIL = nullptr;
+	_pAIL = NULL;
 }
 
 
 bool front( SNPtr _pAIL, int & _retrievedVal )
 {	
-	if (_pAIL == nullptr)
+	if (_pAIL == NULL)
 	{
 		_retrievedVal = 0;
     	return false;
@@ -81,17 +81,16 @@ bool front( SNPtr _pAIL, int & _retrievedVal )
 
 bool back( SNPtr _pAIL, int & _retrievedVal )
 {
-	if (_pAIL == nullptr)
+	if (_pAIL == NULL)
 	{
-		_retrievedVal = 0;
     	return false;
 	}
 	else
 	{
-		while(_pAIL != nullptr)
+		while(_pAIL->mpNext != NULL){
 			_pAIL = _pAIL -> mpNext;
-
 		_retrievedVal = _pAIL -> miData;
+		}
 		return true;
 	}
 
@@ -186,7 +185,7 @@ SNPtr find( SNPtr _pAIL, int _targetVal )
 
 bool insert( SNPtr & _pAIL, SNPtr _pAnte, int _newVal )
 {
-    	if (_pAIL == NULL and _pAnte == NULL)
+	if (_pAIL == NULL and _pAnte == NULL)
 	{
 		return pushFront(_pAIL, _newVal);
 	}
@@ -207,13 +206,13 @@ bool insert( SNPtr & _pAIL, SNPtr _pAnte, int _newVal )
 
 
 bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
-{
+{	
 	_pAIL = _pAIL->mpNext;
 	_pAnte = _pAIL;
 
 	if (_pAIL == NULL)
 		return true;
-	
+
 	if (_pAnte == NULL)
 	{
 		_retrievedVal = _pAIL->miData;
@@ -221,18 +220,18 @@ bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
 		delete _pAIL;
 		_pAIL = slave;
 	}
-	
+
 	while(_pAnte != _pAIL and _pAIL != NULL)
 	{
 		_pAnte = _pAIL;
 		_pAIL = _pAIL->mpNext;
 	}
+
 	if (_pAIL == NULL)
-		return false
+		return false;
 
 	_pAnte->mpNext = _pAIL->mpNext;
-	delete _pAIL->mpNext
-
+	delete _pAIL->mpNext;
     return true;
 }
 
