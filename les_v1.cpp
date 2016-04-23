@@ -186,7 +186,23 @@ SNPtr find( SNPtr _pAIL, int _targetVal )
 
 bool insert( SNPtr & _pAIL, SNPtr _pAnte, int _newVal )
 {
-    return true;
+    	if (_pAIL == NULL and _pAnte == NULL)
+	{
+		return pushFront(_pAIL, _newVal);
+	}
+	SNPtr slave = _pAnte;
+	if (pushFront(_pAnte, _newVal))
+	{
+		SNPtr slave2 = _pAIL;
+		while(_pAIL -> mpNext != slave)
+		{
+			_pAIL = _pAIL->mpNext;
+		}
+		_pAIL->mpNext = _pAnte;
+		_pAIL = slave2;
+		return true;
+	}
+    return false;
 }
 
 
