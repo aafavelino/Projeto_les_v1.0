@@ -89,8 +89,8 @@ bool back( SNPtr _pAIL, int & _retrievedVal )
 	{
 		while(_pAIL->mpNext != NULL){
 			_pAIL = _pAIL -> mpNext;
-		_retrievedVal = _pAIL -> miData;
 		}
+		_retrievedVal = _pAIL -> miData;
 		return true;
 	}
 
