@@ -40,17 +40,19 @@ bool empty( SNPtr _pAIL )
 
 
 void clear( SNPtr & _pAIL )
-{	
-	SNPtr slave;
-	slave = _pAIL;
-
-	while(_pAIL != NULL)
+{
+	/*
+	O clear é como se fossem vários popFront até o final da stack, deixando ela vazia.
+	Usei o seu popFront até o fim da stack (em que _pAIL == NULL).
+	Testa aí se tá funcionando, porque eu só editei pelo site do Github.
+	*/
+	while (_pAIL != NULL)
 	{
-		_pAIL = NULL;
-		_pAIL = slave -> mpNext;
+		SNPtr slave = _pAIL;
+		delete _pAIL;
+		_pAIL = slave->mpNext;
 	}
-	delete[] _pAIL;
-	_pAIL = NULL;
+	//_pAIL = NULL; // Precisa disso? Acho que não, já que quando o while acabar, o _pAIL vai ser NULL.
 }
 
 
