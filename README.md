@@ -37,7 +37,7 @@ Logo após basta executar o jogo usando o comando:
 #Bugs e limitações
 --------------------------------------------------------------------------------------
 
-O uso da função clear está limitado, não consegui implementa-la de forma correta.
+O uso da função clear está limitado, não consegui implementa-la de forma correta.(Jotave consertou)
 
 link do github :
 
