@@ -1,6 +1,3 @@
-// Para compilar: g++ -Wall -pedantic drive_les_v1.cpp les_v1.cpp -o drive_les_v1
-
-
 #include <iostream>
 using std::cout;
 #include "les_v1.h"
