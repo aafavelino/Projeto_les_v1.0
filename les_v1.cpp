@@ -129,7 +129,6 @@ bool pushBack( SNPtr & _pAIL, int _newVal )
     return true;
 }
 
-
 bool popFront( SNPtr & _pAIL, int & _retrievedVal )
 {
 	if (front(_pAIL,_retrievedVal))
