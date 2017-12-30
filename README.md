@@ -1,4 +1,4 @@
-#Lista Encadeada
+# Lista Encadeada
 =====================================================================================
 
 Versão 1.0.0 - Sábado 23 de Abril de 2016
@@ -6,7 +6,7 @@ Versão 1.0.0 - Sábado 23 de Abril de 2016
 por Adelino Afonso Fernandes Avelino
 
 
-#Introdução
+# Introdução
 --------------------------------------------------------------------------------------
 
 Uma lista ligada ou lista encadeada é uma estrutura de dados linear e dinâmica.
@@ -20,7 +20,7 @@ Escrito em C++, o software é executado através do terminal aonde são
 faitas todas as operações. 
 
 
-#Instalação
+# Instalação
 --------------------------------------------------------------------------------------
 
 Para executar o programa deve-se extrair o arquivo "Projeto_les_v1.0.
@@ -34,10 +34,10 @@ Logo após basta executar o jogo usando o comando:
 	./bin/drive_les_v1 
 
 
-#Bugs e limitações
+# Bugs e limitações
 --------------------------------------------------------------------------------------
 
-O uso da função clear está limitado, não consegui implementa-la de forma correta.(Jotave consertou)
+O uso da função clear está limitado, não consegui implementa-la de forma completa.
 
 link do github :
 
